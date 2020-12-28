@@ -137,7 +137,7 @@ curl --request POST http://0.0.0.0:8080/todos/1/items
 curl --request POST http://0.0.0.0:8080/todos/1/items/1
 ```
 
-#### #6.1. Response body:
+#### 6.1. Response body:
 
 ```json
 {

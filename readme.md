@@ -31,22 +31,10 @@ cargo build --release --target=x86_64-unknown-linux-musl
 docker-compose run
 ```
 
-### Install diesel
-
-```bash
-cargo install diesel_cli --no-default-features --features postgres
-```
-
 ### Run db migrations
 
 ```bash
 DATABASE_URL=postgres://actix:actix@localhost:5432/actix diesel migration run
-```
-
-### enjoy
-
-```
-http://0.0.0.0:8080
 ```
 
 ### Routes

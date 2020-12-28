@@ -42,13 +42,13 @@ http://0.0.0.0:8080
 
 ### Routes
 
-####1. Status
+#### 1. Status
 
 ```bash
 curl --request GET http://0.0.0.0:8080
 ```
 
-####1.1 Response body:
+#### 1.1 Response body:
 
 ```json
 {

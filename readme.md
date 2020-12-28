@@ -42,13 +42,13 @@ http://0.0.0.0:8080
 
 ### Routes
 
-1. Status
+####1. Status
 
-```api
-GET /
+```bash
+curl --request GET http://0.0.0.0:8080
 ```
 
-Response body:
+####1.1 Response body:
 
 ```json
 {
@@ -56,13 +56,13 @@ Response body:
 }
 ```
 
-2. get Todos
+####2. get Todos
 
 ```bash
 curl --request POST http://0.0.0.0:8080/todos
 ```
 
-Response body:
+####2.1. Response body:
 
 ```json
 [
@@ -74,13 +74,13 @@ Response body:
 ]
 ```
 
-3. Get single todo list
+####3. Get single todo list
 
 ```bash
 curl --request POST http://0.0.0.0:8080/todos/1
 ```
 
-Response body:
+####3.1. Response body:
 
 ```json
 {
@@ -89,7 +89,7 @@ Response body:
 }
 ```
 
-4. Create todo list
+####4. Create todo list
 
 ```bash
 curl --header "Content-Type: application/json" \
@@ -97,7 +97,7 @@ curl --header "Content-Type: application/json" \
   http://0.0.0.0:8080/todos
 ```
 
-Response body:
+####4.1. Response body:
 
 ```json
 {
@@ -106,13 +106,13 @@ Response body:
 }
 ```
 
-5. Get items of the todo list
+####5. Get items of the todo list
 
 ```bash
 curl --request POST http://0.0.0.0:8080/todos/1/items
 ```
 
-Response body:
+####5.1. Response body:
 
 ```json
 [
@@ -131,13 +131,13 @@ Response body:
 ]
 ```
 
-6. Get single item of the list
+####6. Get single item of the list
 
 ```bash
 curl --request POST http://0.0.0.0:8080/todos/1/items/1
 ```
 
-Response body:
+#####6.1. Response body:
 
 ```json
 {
@@ -147,24 +147,30 @@ Response body:
   "checked": false
 }
 ```
-7. Create todo list item
+
+####7. Create todo list item
+
 ```bash
 curl --header "Content-Type: application/json" \
   --request POST --data '{"title":"Socks"}' \
   http://0.0.0.0:8080/todos/1/items
 ```
-Response body:
+
+####7.1. Response body:
 
 ```json
 {
   "title": "Socks"
 }
 ```
-8. Check todo item as done
+
+####8. Check todo item as done
+
 ```bash
 curl --request PUT http://0.0.0.0:8080/todos/1/items/1
 ```
-Response body:
+
+####8.1. Response body:
 
 ```json
 {
@@ -172,15 +178,16 @@ Response body:
 }
 ```
 
+# Benchmarks
 
-#Benchmarks
-
-1. Read test
+###1. Read test
 
 ```bash
 ab -n 100000 -k -c 30 -q http://0.0.0.0:8080/todos/1
 ```
-Result:
+
+###1.1. Result:
+
 ```bash
 This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
 Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
@@ -228,11 +235,14 @@ Percentage of the requests served within a certain time (ms)
 
 ```
 
-2. Write test
+###2. Write test
+
 ```bash
 ab -p benchmark-post.json -T application/json -n 100000 -k -c 30 -q http://0.0.0.0:8080/todos
 ```
-Result:
+
+###2.1. Result:
+
 ```bash
 This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
 Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/

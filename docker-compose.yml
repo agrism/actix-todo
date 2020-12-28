@@ -4,7 +4,7 @@ services:
     image: postgres:11-alpine
     restart: always
     environment:
-      POSTGRES_PASSWORD: actix-rt
+      POSTGRES_PASSWORD: actix
       POSTGRES_USER: actix
       POSTGRES_DB: actix
     ports:
@@ -23,14 +23,14 @@ services:
       SERVER.PORT: 8080
       PG.USER: actix
       PG.PASSWORD: actix
-      PG.HOST: posgres
+      PG.HOST: postgres
       PG.PORT: 5432
       PG.DBNAME: actix
       PG.POOL.MAX_SIZE: 30
     deploy:
       resources:
         limits:
-          memory: '16'
+          memory: '1G'
           cpus: '2'
     ports:
       - 8080:8080

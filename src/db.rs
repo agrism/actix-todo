@@ -5,7 +5,7 @@ use tokio_pg_mapper::FromTokioPostgresRow;
 
 pub async fn create_todo(client: &Client, title: String) -> Result<TodoList, AppError> {
     let statement = client
-        .prepare("insert into todo_list (title) values ($1) retuning id, title")
+        .prepare("insert into todo_list (title) values ($1) returning id, title")
         .await?;
 
     client
@@ -63,7 +63,7 @@ pub async fn create_item(
     title: String,
 ) -> Result<TodoItem, AppError> {
     let statement = client
-        .prepare("insert into todo_item (list_id, title) values ($1, $2) returning id, list_id, title, chekced")
+        .prepare("insert into todo_item (list_id, title) values ($1, $2) returning id, list_id, title, checked")
         .await?;
 
     client
@@ -97,7 +97,7 @@ pub async fn get_items(client: &Client, list_id: i32) -> Result<Vec<TodoItem>, A
 
 pub async fn get_item(client: &Client, list_id: i32, item_id: i32) -> Result<TodoItem, AppError> {
     let statement = client
-        .prepare("select * from todo_item where list_id = $1 and $2")
+        .prepare("select * from todo_item where list_id = $1 and id = $2")
         .await?;
 
     let maybe_item = client

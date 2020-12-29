@@ -253,40 +253,38 @@ Server Hostname:        0.0.0.0
 Server Port:            8080
 
 Document Path:          /todos
-Document Length:        36 bytes
+Document Length:        39 bytes
 
 Concurrency Level:      30
-Time taken for tests:   46.717 seconds
+Time taken for tests:   56.625 seconds
 Complete requests:      100000
-Failed requests:        99104
-   (Connect: 0, Receive: 0, Length: 99104, Exceptions: 0)
+Failed requests:        0
 Keep-Alive requests:    100000
-Total transferred:      16989312 bytes
+Total transferred:      17100000 bytes
 Total body sent:        19500000
-HTML transferred:       3789312 bytes
-Requests per second:    2140.54 [#/sec] (mean)
-Time per request:       14.015 [ms] (mean)
-Time per request:       0.467 [ms] (mean, across all concurrent requests)
-Transfer rate:          355.14 [Kbytes/sec] received
-                        407.62 kb/s sent
-                        762.76 kb/s total
+HTML transferred:       3900000 bytes
+Requests per second:    1766.00 [#/sec] (mean)
+Time per request:       16.988 [ms] (mean)
+Time per request:       0.566 [ms] (mean, across all concurrent requests)
+Transfer rate:          294.91 [Kbytes/sec] received
+                        336.30 kb/s sent
+                        631.21 kb/s total
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
 Connect:        0    0   0.0      0       2
-Processing:     2   14  10.8     10      93
-Waiting:        2   14  10.8     10      93
-Total:          2   14  10.8     10      93
+Processing:     2   17  19.9     12    1026
+Waiting:        2   17  19.9     12    1026
+Total:          2   17  19.9     12    1026
 
 Percentage of the requests served within a certain time (ms)
-  50%     10
-  66%     12
-  75%     14
-  80%     16
-  90%     35
-  95%     41
-  98%     46
-  99%     49
- 100%     93 (longest request)
-
+  50%     12
+  66%     15
+  75%     18
+  80%     20
+  90%     38
+  95%     44
+  98%     49
+  99%     52
+ 100%   1026 (longest request)
 ```

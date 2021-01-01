@@ -198,37 +198,37 @@ Server Hostname:        0.0.0.0
 Server Port:            8080
 
 Document Path:          /todos/1
-Document Length:        25 bytes
+Document Length:        34 bytes
 
 Concurrency Level:      30
-Time taken for tests:   37.379 seconds
+Time taken for tests:   40.559 seconds
 Complete requests:      100000
 Failed requests:        0
 Keep-Alive requests:    100000
-Total transferred:      15700000 bytes
-HTML transferred:       2500000 bytes
-Requests per second:    2675.30 [#/sec] (mean)
-Time per request:       11.214 [ms] (mean)
-Time per request:       0.374 [ms] (mean, across all concurrent requests)
-Transfer rate:          410.18 [Kbytes/sec] received
+Total transferred:      16600000 bytes
+HTML transferred:       3400000 bytes
+Requests per second:    2465.57 [#/sec] (mean)
+Time per request:       12.168 [ms] (mean)
+Time per request:       0.406 [ms] (mean, across all concurrent requests)
+Transfer rate:          399.69 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    0   0.0      0       1
-Processing:     2   11   7.4      9      63
-Waiting:        2   11   7.4      9      63
-Total:          2   11   7.4      9      63
+Connect:        0    0   0.0      0       2
+Processing:     2   12  11.7     10    1025
+Waiting:        2   12  11.7     10    1024
+Total:          2   12  11.7     10    1025
 
 Percentage of the requests served within a certain time (ms)
-  50%      9
-  66%     11
+  50%     10
+  66%     12
   75%     13
   80%     14
-  90%     20
-  95%     29
+  90%     18
+  95%     25
   98%     35
-  99%     39
- 100%     63 (longest request)
+  99%     40
+ 100%   1025 (longest request)
 
 ```
 
@@ -256,35 +256,36 @@ Document Path:          /todos
 Document Length:        39 bytes
 
 Concurrency Level:      30
-Time taken for tests:   56.625 seconds
+Time taken for tests:   56.163 seconds
 Complete requests:      100000
 Failed requests:        0
 Keep-Alive requests:    100000
 Total transferred:      17100000 bytes
 Total body sent:        19500000
 HTML transferred:       3900000 bytes
-Requests per second:    1766.00 [#/sec] (mean)
-Time per request:       16.988 [ms] (mean)
-Time per request:       0.566 [ms] (mean, across all concurrent requests)
-Transfer rate:          294.91 [Kbytes/sec] received
-                        336.30 kb/s sent
-                        631.21 kb/s total
+Requests per second:    1780.52 [#/sec] (mean)
+Time per request:       16.849 [ms] (mean)
+Time per request:       0.562 [ms] (mean, across all concurrent requests)
+Transfer rate:          297.33 [Kbytes/sec] received
+                        339.06 kb/s sent
+                        636.40 kb/s total
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
 Connect:        0    0   0.0      0       2
-Processing:     2   17  19.9     12    1026
-Waiting:        2   17  19.9     12    1026
-Total:          2   17  19.9     12    1026
+Processing:     3   17  10.0     13      86
+Waiting:        3   17  10.0     13      86
+Total:          3   17  10.0     13      86
 
 Percentage of the requests served within a certain time (ms)
-  50%     12
-  66%     15
+  50%     13
+  66%     16
   75%     18
   80%     20
-  90%     38
-  95%     44
-  98%     49
-  99%     52
- 100%   1026 (longest request)
+  90%     33
+  95%     41
+  98%     47
+  99%     51
+ 100%     86 (longest request)
+
 ```

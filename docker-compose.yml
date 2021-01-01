@@ -30,7 +30,7 @@ services:
     deploy:
       resources:
         limits:
-          memory: '1G'
-          cpus: '2'
+          memory: '512M'
+          cpus: '1'
     ports:
       - 8080:8080
